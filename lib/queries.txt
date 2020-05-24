@@ -1,0 +1,47 @@
+{
+  getAllMessages {
+    id
+    text
+    comment
+    author {
+      id
+      name
+    }
+  }
+}
+
+{
+  getMessage(id:"1") {
+    id
+    text
+    comment
+    author {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  createMessage(input:{
+    text: "Este es mi nuevo mensaje personalizado"
+    author: "Bill Gates"
+    comment: "Message test"
+  }) {
+    id
+    text
+    comment
+  }
+}
+
+mutation {
+  updateMessage(id:"3", input:{
+    text: "Este es mi nuevo mensaje personalizado 55"
+    author: "Bill Gates 22"
+    comment: "Message test 22"
+  }) {
+    id
+    text
+    comment
+  }
+}
